@@ -1,0 +1,26 @@
+name = "survive-1840"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Serves public/index.html (and any other files you drop in public/) for
+# every request that isn't under /api/*. This is the modern replacement for
+# the old "Workers Sites" — no separate Pages project needed, the Worker
+# handles both the API and the static frontend.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# KV namespace used for the single shared, cross-platform leaderboard.
+# Every player plays as a guest — there are no accounts or saved games,
+# so this is the only thing the Worker persists.
+#
+# Create it first with:
+#   npx wrangler kv namespace create GAME_KV
+# then paste the returned "id" below. For local dev with `wrangler dev`,
+# also run:
+#   npx wrangler kv namespace create GAME_KV --preview
+# and paste that id into preview_id.
+[[kv_namespaces]]
+binding = "GAME_KV"
+id = "e1b8b85c1df2494e9fff3ffd85d05791"
+# preview_id = "caec84194b9e45bf9d37f26c82661c0d"

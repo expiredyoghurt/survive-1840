@@ -1,0 +1,15 @@
+{
+  "name": "survive-1840",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Survive 1840 — a 1840s Singapore survival game. Everyone plays as a guest; a minimal Cloudflare Worker hosts the frontend and a single shared, cross-platform leaderboard in KV.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
