@@ -1,6 +1,6 @@
 # Update Guide — v2.2 Content Update
 
-## What's new
+## What's new 
 
 See the **v2.2** entry at the top of `README.md` for the full list. In short:
 
