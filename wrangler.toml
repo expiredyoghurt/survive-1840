@@ -24,3 +24,7 @@ binding = "ASSETS"
 binding = "GAME_KV"
 id = "e1b8b85c1df2494e9fff3ffd85d05791"
 # preview_id = "caec84194b9e45bf9d37f26c82661c0d"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
