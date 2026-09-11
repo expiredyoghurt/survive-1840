@@ -1,23 +1,27 @@
-# Prologue illustrations — expected files
+# Prologue illustrations
 
 Drop image files here with these exact names and the game will pick them
 up automatically — no code changes needed. Until a file exists, that
 screen just renders without an image (see `illustration()` in
-`index.html` for the graceful-degradation logic).
+`index.html` for the graceful-degradation logic). All rows below are
+filled as of this writing.
 
-| Screen | Expected file | Used for |
+| Screen | File | Used for |
 |---|---|---|
 | "Why I Left" (per race) | `chinese_departure.jpg` | Chinese character's departure scene |
 | | `indian_departure.jpg` | Indian character's departure scene |
 | | `malay_departure.jpg` | Malay character's departure scene |
 | | `eurasian_departure.jpg` | Eurasian character's departure/family scene |
-| "The Passage" / "Coming to Singapore" | `voyage.jpg` | Shared across all races — a ship bound for Singapore |
+| "The Passage" (per race) | `chinese_voyage.jpg` | Chinese character's voyage scene |
+| | `indian_voyage.jpg` | Indian character's voyage scene |
+| | `malay_voyage.jpg` | Malay character's voyage scene |
+| | `eurasian_voyage.jpg` | Eurasian character's voyage scene |
 | "Arrival" | `arrival.jpg` | Shared across all races — arrival at the Singapore River |
 
-Suggested prompts for each are in the chat history (the "storyboard" pass
-that preceded this feature) — woodcut/sepia/period-illustration style,
-same style block used for the ending/budget/backdrop illustrations
-discussed there.
+Note: the voyage screen used to share a single `voyage.jpg` across every
+race before per-race journey art existed. It's now looked up as
+`{race}_voyage.jpg`, matching the departure screen's pattern exactly —
+see `renderPrologue2()` in `index.html`.
 
 **Format guidance:** JPG or WebP, ideally under ~150KB each (these load
 on every new game, so keep them light), roughly 4:3 or 16:9 — the CSS
